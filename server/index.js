@@ -16,9 +16,9 @@ app.get('/product/:id', function (req, res, next) {
 //  db.getProductImages() => {
 
 //  }
- db.getProductImages() => {
+//  db.getProductImages() => {
 
- }
+//  }
 })
 
 

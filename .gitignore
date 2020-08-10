@@ -2,10 +2,10 @@ node_modules
 
 config.js
 
-package-lock.json
-
 testfaker.js
 
 seeding_old.js
+
+.DS_Store
 
 .DS_Store
