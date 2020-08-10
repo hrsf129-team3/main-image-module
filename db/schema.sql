@@ -19,11 +19,3 @@ CREATE table product_images (
     REFERENCES product_skus(id)
 );
 
--- -- 1 = african lamp
-
--- produc_images
--- -- 1 1 image1.com 1
--- -- 2 2 image2.com 1
--- -- 3 3 image3.com 1
--- -- 4 4 image4.com 1
-

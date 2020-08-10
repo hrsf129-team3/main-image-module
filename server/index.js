@@ -1,15 +1,21 @@
-const exprss = require('express');
+
+const express = require('express');
 const app = express();
 const PORT = 3007;
 const path = require('path');
 
 //middleware
 app.use(express.json());
-app.use(express.static(path.jon(__dirname, '../client/dist')))
+app.use(express.static(path.join(__dirname, '../client/dist')))
 
 //routes
 
 app.get('/product/:id', function (req, res, next) {
+
+  console.log(req.body);
+//  db.getProductImages() => {
+
+//  }
  db.getProductImages() => {
 
  }
