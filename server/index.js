@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const PORT = 3007;
 const path = require('path');
+const db = require('../db/index.js')
 
 //middleware
 app.use(express.json());
@@ -10,16 +11,18 @@ app.use(express.static(path.join(__dirname, '../client/dist')))
 
 //routes
 
-app.get('/product/:id', function (req, res, next) {
-
-  console.log(req.body);
-//  db.getProductImages() => {
-
-//  }
-//  db.getProductImages() => {
-
-//  }
-})
+//sample api route for product 1
+app.get('/product1', function (req, res, next) {
+  console.log('req.body', req.body);
+  db.getProductOneImages((err, results) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      // console.log(results);
+      res.status(200).send(results);
+    }
+  });
+});
 
 
 //start server

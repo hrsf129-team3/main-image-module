@@ -18,6 +18,22 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      {
+        test: /\.scss$/i,
+        exclude: /node_modules/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+            },
+          },
+          {
+            loader:'sass-loader',
+          }
+        ],
+      },
     ],
   },
 };
