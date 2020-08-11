@@ -14,7 +14,7 @@ let seedProductSKUs = () => {
   })
 }
 
-seedProductSKUs();
+// seedProductSKUs();
 
 // let seedProductSKUs = (products) => {
 //   for (var i = 0; i < products.length; i++) {
