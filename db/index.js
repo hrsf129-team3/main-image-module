@@ -22,6 +22,15 @@ var getProductOneImages = function(callback) {
   });
 };
 
+var getProductOneInfo = function(callback) {
+  connection.query('SELECT * FROM product_images where product_id = 1', function(err, results) {
+    if (err) {
+      callback(err);
+    } else {
+      callback(null, results);
+    }
+  });
+};
 // var getProductImages = function(callback) {
 //   connection.query('SELECT  FROM ', function(err, results) {
 //     if (err) {
@@ -34,3 +43,4 @@ var getProductOneImages = function(callback) {
 
 module.exports = connection;
 module.exports.getProductOneImages = getProductOneImages;
+module.exports.getProductOneInfo = getProductOneInfo;
