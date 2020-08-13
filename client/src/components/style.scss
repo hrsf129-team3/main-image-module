@@ -1,13 +1,73 @@
 
 
-// $loaders: purple;
+$loaders: purple;
 
-// .loader {
-//   color: $loaders
-// }
+.loader {
+  color: $loaders
+}
+
+$roundedCorners: 50px;
+
+$circle: 50%;
 
 .sideImages {
   display: flex;
-  height: 500px;
-  width: 500px
+  height: 300px;
+  width: 300px;
+  border-radius: $roundedCorners;
+  margin-bottom: 20px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.headerImage {
+  position: auto ; /* or absolute */
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  // margin-left: 500px;
+  // margin-rgigt
+  margin-top: 500px;
+  height: 1000px;
+  width: 1000px;
+  // float: left
+  vertical-align: middle;
+  border-right: 200px solid white;
+  border-left: 200px solid white;
+}
+
+.leftArrow {
+  display: flex;
+  height: 100px;
+  width: 100px;
+  border-radius: $circle;
+  flex-direction: row-reverse;
+  box-shadow: 2px 2px 20px grey;
+  margin: 0 auto;
+  cursor: pointer;
+  // position: absolute;
+  // top: 50%; right: 0;
+  position: absolute;
+  top: 50%; left: 0;
+}
+
+.rightArrow {
+  display: flex;
+  height: 100px;
+  width: 100px;
+
+  //  width: 0;
+  // height: 0;
+  flex-direction: row-reverse;
+  box-shadow: 2px 2px 20px grey;
+  margin: 0 auto;
+  border-radius: $circle;
+  cursor: pointer;
+  position: absolute;
+  top: 50%; right: 0;
+}
+
+.headerImageContainer {
+  position: relative;
+  display: inline-block;
 }

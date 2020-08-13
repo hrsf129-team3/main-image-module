@@ -2,4 +2,3 @@
 
 exports[`App should render app component 1`] = `ShallowWrapper {}`;
 
-exports[`Image should render image component 1`] = `ShallowWrapper {}`;

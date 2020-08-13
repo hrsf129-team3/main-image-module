@@ -11,7 +11,7 @@ class ImageList extends React.Component {
   render() {
     return (
       <div>
-        {/* <HeaderImage allImages={this.props.allImages} /> */}
+        <HeaderImage />
         {this.props.allImages.map((image) => {
           return <Image image={image} allImages={this.props.allImages} />
         })}

@@ -12,12 +12,17 @@
     "build": "webpack --mode production",
     "start": "nodemon server/index.js",
     "seed": "node db/seeding.js",
-    "test": "jest"
+    "test": "jest",
+    "eslinter": "eslint '**/*.js' --ignore-pattern node_modules/",
+    "lint": "eslint --fix --ext .js,.jsx . --ignore-pattern bundle.js",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --colors"
   },
   "dependencies": {
     "axios": "^0.19.2",
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",
+    "enzyme-wait": "^1.0.9",
     "express": "^4.17.1",
     "faker": "^4.1.0",
     "mysql": "^2.18.1",
