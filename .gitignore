@@ -2,8 +2,6 @@ node_modules
 
 config.js
 
-package-lock.json
-
 testfaker.js
 
 seeding_old.js
@@ -13,3 +11,5 @@ seeding_old.js
 sum.js
 
 sum.test.js
+
+coverage

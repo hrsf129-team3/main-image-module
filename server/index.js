@@ -11,10 +11,10 @@ app.use(express.static(path.join(__dirname, '../client/dist')))
 
 //routes
 
-//api get request for all info from product1
-app.get('/product1info', function (req, res, next) {
-  // console.log('req.body', req.body);
-  db.getProductOneInfo((err, results) => {
+//sample api route for product 1
+app.get('/product1', function (req, res, next) {
+  console.log('req.body', req.body);
+  db.getProductOneImages((err, results) => {
     if (err) {
       res.status(500).send(err);
     } else {
@@ -24,10 +24,10 @@ app.get('/product1info', function (req, res, next) {
   });
 });
 
-//sample api route for product 1
-app.get('/product1', function (req, res, next) {
-  console.log('req.body', req.body);
-  db.getProductOneImages((err, results) => {
+//sample api route for product 1 all info
+app.get('/product1info', function (req, res, next) {
+  // console.log('req.body', req.body);
+  db.getProductOneInfo((err, results) => {
     if (err) {
       res.status(500).send(err);
     } else {

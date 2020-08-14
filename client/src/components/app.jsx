@@ -4,6 +4,7 @@ import ImageList from './imageList.jsx';
 import axios from 'axios';
 import RightArrow from './rightArrow.jsx';
 import LeftArrow from './leftArrow.jsx';
+import HeaderImage from './headerImage.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class App extends React.Component {
     }
 
     this.getSampleProductOneAllInfo = this.getSampleProductOneAllInfo.bind(this);
-    this.showInitialHeaderImage = this.showInitialHeaderImage.bind(this);
+    // this.showInitialHeaderImage = this.showInitialHeaderImage.bind(this);
     // this.previousImage = this.previousImage.bind(this);
     // this.nextImage = this.nextImage.bind(this);
     // this.getSampleProductOneImages = this.getSampleProductOneImages.bind(this);
@@ -24,15 +25,15 @@ class App extends React.Component {
 
   componentDidMount() {
     this.getSampleProductOneAllInfo();
-    this.showInitialHeaderImage();
+    // this.showInitialHeaderImage();
   }
 
   //initially starting setup with one working image page
 
-  showInitialHeaderImage() {
-    // return
-    // this.state.allImages[0].image_url;
-  }
+  // showInitialHeaderImage() {
+  //   // return
+  //   // this.state.allImages[0].image_url;
+  // }
 
   getSampleProductOneAllInfo() {
     axios.get('/product1info')
@@ -85,16 +86,20 @@ class App extends React.Component {
 
   render() {
     // console.log('all images', this.state.allImages)
-    console.log(this.state.allImages[0],"imageurl");
+    // console.log(this.state.allImages[0],"imageurl");
     return (
-      <div>
-        {/* {this.state.allImages[0].image_url} */}
+      <div className={styles.app}>
         {/* <h1 className={styles.loader}>
           Page has loaded!
         </h1> */}
-        <ImageList allImages={this.state.allImages} />
-        <LeftArrow previousImage={this.previousImage}/>
-        <RightArrow nextImage={this.nextImage}/>
+        <div className={styles.sideImages}>
+          <ImageList allImages={this.state.allImages} />
+        </div>
+        <div className={styles.header}>
+          <HeaderImage />
+          <LeftArrow previousImage={this.previousImage} />
+          <RightArrow nextImage={this.nextImage} />
+        </div>
       </div>
     );
   }
