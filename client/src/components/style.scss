@@ -19,14 +19,11 @@ $circle: 50%;
 }
 
 .sideImages {
-  // display: flex;
-  // display: flex;
   height: 300px;
   width: 300px;
   border-radius: $roundedCorners;
   margin-bottom: 20px;
   cursor: pointer;
-  // margin-top: 5px;
 }
 
 .header {
@@ -36,13 +33,7 @@ $circle: 50%;
 }
 
 .headerImage {
-  // display: flex;
-  // position: auto ; /* or absolute */
-  // top: 50%;
-  // left: 50%;
   // margin: 0 auto;
-  // margin-left: 500px;
-  // margin-rgigt
   // margin-top: 500px;
   // height: 1000px;
   // width: 1000px;
@@ -61,42 +52,19 @@ $circle: 50%;
   width: 100px;
   border-radius: $circle;
   margin: 15px;
-  // flex-direction: row-reverse;
   box-shadow: 2px 2px 20px grey;
-  // margin: 0 auto;
   cursor: pointer;
-  // position: absolute;
-  // top: 50%; right: 0;
-  // position: absolute;
   align-self: center;
-  // flex-direction: column;
-  // align-content: flex-start;
-  // align-items: flex-start;
-  // top: 50%; left: 0;
 }
 
 .rightArrow {
-  // display: flex;
   order: 1;
   height: 100px;
   width: 100px;
   margin: 15px;
   align-self: center;
-  // align-items: flex-end;
-  // flex-direction: column;
-
-  //  width: 0;
-  // height: 0;
-  // flex-direction: row-reverse;
   box-shadow: 2px 2px 20px grey;
-  // margin: 0 auto;
   border-radius: $circle;
   cursor: pointer;
-  // position: absolute;
-  // top: 50%; right: 0;
 }
 
-// .headerImageContainer {
-//   position: relative;
-//   display: inline-block;
-// }
