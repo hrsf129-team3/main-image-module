@@ -5,3 +5,66 @@ $loaders: purple;
 .loader {
   color: $loaders
 }
+
+$roundedCorners: 50px;
+
+$circle: 50%;
+
+.app {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  align-content: flex-start;
+}
+
+.sideImages {
+  height: 300px;
+  width: 300px;
+  border-radius: $roundedCorners;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  border-right: 30px solid white;
+  border-left: 30px solid white;
+}
+
+.headerImage {
+  // margin: 0 auto;
+  // margin-top: 500px;
+  // height: 1000px;
+  // width: 1000px;
+  // float: left
+  // vertical-align: middle;
+  // order: 0;
+  // border-right: 30px solid white;
+  // border-left: 30px solid white;
+}
+
+.leftArrow {
+  // display: flex;
+  align-items: stretch;
+  order: -1;
+  height: 100px;
+  width: 100px;
+  border-radius: $circle;
+  margin: 15px;
+  box-shadow: 2px 2px 20px grey;
+  cursor: pointer;
+  align-self: center;
+}
+
+.rightArrow {
+  order: 1;
+  height: 100px;
+  width: 100px;
+  margin: 15px;
+  align-self: center;
+  box-shadow: 2px 2px 20px grey;
+  border-radius: $circle;
+  cursor: pointer;
+}
+

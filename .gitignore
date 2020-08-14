@@ -8,4 +8,8 @@ seeding_old.js
 
 .DS_Store
 
-.DS_Store
+sum.js
+
+sum.test.js
+
+coverage
