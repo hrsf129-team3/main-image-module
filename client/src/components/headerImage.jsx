@@ -6,10 +6,16 @@ class HeaderImage extends React.Component {
     super(props);
   }
 
+  // showFirstImage () {
+  //   if (this.props.allImages[0] !== undefined) {
+  //     return this.props.allImages[0].image_url;
+  //   }
+  // }
+
   render() {
     return (
       <div>
-          <img className={styles.headerImage} src="https://etsy-main-image-module.s3-us-west-1.amazonaws.com/african-lamp/african+lamp+1.jpg"></img>
+        <img className={styles.headerImage} src={this.props.firstImage}></img>
       </div>
     )
   }
