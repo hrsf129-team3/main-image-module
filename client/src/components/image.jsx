@@ -6,17 +6,40 @@ class Image extends React.Component {
   constructor(props) {
     super(props);
 
-    this.selectHeader= this.selectHeader.bind(this);
+    this.state = {
+      sideImageIndex: 0
+    }
+
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  selectHeader() {
-    console.log("new header selected");
+  handleClick(index, event) {
+    console.log(event, "event");
+    console.log(index, "index");
+    this.props.sideImageChange(this.props.index);
+
+    // this.props.setMainImage(this.sideImageIndex)
+    // event.preventDefault();
+
+    // this.props.showSideImage(this.props.index);
+  // },
+  //   console.log(event, "event");
+  //   // console.log(index, "index");
+  //   this.setState({sideImageIndex: this.key - 1});
+    // setState({sideImageIndex: this.props.image.image_order})
+    // this.props.sideImageChange(this.state);
   }
+
+  // selectHeader() {
+  //   console.log("new header selected");
+  // }
+
+  // this.props.content[index]
 
   render() {
     return (
       <div>
-        <img onClick={this.selectHeader} src={this.props.image.image_url} className={styles.sideImages} alt="product image"></img>
+        <img src={this.props.image.image_url}  alt="product image" className={styles.sideImages} onClick={() => {this.handleClick(this.props.index, event)}}></img>
       </div>
     )
   }

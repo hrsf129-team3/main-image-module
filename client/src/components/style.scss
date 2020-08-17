@@ -21,18 +21,34 @@ $circle: 50%;
 .sideImages {
   height: 300px;
   width: 300px;
-  border-radius: $roundedCorners;
+  border-radius: 50px;
   margin-bottom: 20px;
   cursor: pointer;
+  order: 0;
 }
 
 .header {
   display: flex;
   border-right: 30px solid white;
   border-left: 30px solid white;
+  flex: 1 0;
+  flex-direction: row;
+  // flex: 1 1 10000px;
+  height: 2000px;
+  width: 2000px;
+}
+
+.carousel {
+  display: flex;
+  order: 1;
 }
 
 .headerImage {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1 1 10000px;
+
   // margin: 0 auto;
   // margin-top: 500px;
   // height: 1000px;
@@ -67,4 +83,18 @@ $circle: 50%;
   border-radius: $circle;
   cursor: pointer;
 }
+
+.heart {
+  order: 1;
+  height: 80px;
+  width: 80px;
+  border: 20px solid white;
+  // margin: 15px;
+  align-self: flex-start;
+  box-shadow: 2px 2px 20px grey;
+  border-radius: $circle;
+  cursor: pointer;
+}
+
+
 
