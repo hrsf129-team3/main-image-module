@@ -70,7 +70,7 @@ class Modal extends React.Component {
         <div className={styles.exit}>
           <svg onClick={this.props.exitModal} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 101.414 1.414L12 13.414l6.293 6.293a1 1 0 001.414-1.414z" /></svg>
         </div>
-        <div className={styles.modalSideImages}>
+        <div className={styles.modalSideImagesContainer}>
           <ModalImageList allImages={this.props.allImages} modalSideImageChange={this.modalSideImageChange}/>
         </div>
       </div>
