@@ -43,22 +43,33 @@ $circle: 50%;
   align-self: center;
 }
 
+.rightArrowContainer {
+  flex: 9;
+  display: flex;
+  // bottom:
+}
+
+.heartContainer {
+  flex: 1;
+  display: flex;
+}
+
 .rightArrow {
   order: 1;
   height: 100px;
   width: 100px;
-  margin: 15px;
+  margin-left: 15px;
   justify-content: center;
   align-self: center;
   box-shadow: 2px 2px 20px grey;
   border-radius: $circle;
   cursor: pointer;
+  margin-bottom: 180px;
 }
 
 .iconsContainer {
   height: 100%;
   display: flex;
-  justify-content: flex-start;
   flex-direction: column;
   justify-content: center;
 }
@@ -68,10 +79,10 @@ $circle: 50%;
   height: 80px;
   width: 80px;
   border: 20px solid white;
-  position: absolute;
-  top: 0;
   box-shadow: 2px 2px 20px grey;
   border-radius: $circle;
   cursor: pointer;
+   // position: absolute;
+  // top: 0;
 }
 
