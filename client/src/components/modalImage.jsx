@@ -15,7 +15,7 @@ class ModalImage extends React.Component {
 
   render() {
     return (
-      <div className={styles.modalSideImagesContainer}>
+      <div>
         <img src={this.props.image.image_url}  alt="modal product image" className={styles.modalSideImages} onClick={() => {this.handleClick(this.props.index, event)}}></img>
       </div>
     )

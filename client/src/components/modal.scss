@@ -15,8 +15,9 @@ $circle: 50%;
 .modalSideImagesContainer{
   display: flex;
   flex-direction: column;
-  display: block;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  // overflow: auto;
 }
 
 .exit {
@@ -30,7 +31,7 @@ $circle: 50%;
   background-color: white;
   cursor: pointer;
   z-index: 2;
-  margin-left: 900px;
+  margin-left: 1100px;
   flex: 0 0 auto;
 }
 
@@ -50,7 +51,7 @@ $circle: 50%;
   height: 100px;
   width: 100px;
   border-radius: $circle;
-  margin: 0px 150px 50px 50px; //top right bottom left
+  margin: 0px 150px 450px 50px; //top right bottom left
   box-shadow: 2px 2px 20px grey;
   cursor: pointer;
   align-self: center;
@@ -64,7 +65,7 @@ $circle: 50%;
   order: 0;
   height: 100px;
   width: 100px;
-  margin: 0px 150px 200px 150px; //top right bottom left
+  margin: 0px 150px 450px 150px; //top right bottom left
   align-self: center;
   box-shadow: 2px 2px 20px grey;
   border-radius: $circle;
@@ -86,7 +87,7 @@ $circle: 50%;
   top: 0;
   width: 100%; //Full width
   height: 120%; // Full height
-  overflow: auto; // Enable scroll if needed
+  // overflow: auto; // Enable scroll if needed
   background-color: rgb(82,82,82, 0.9); // Fallback color */
   opacity: 1;
   // visibility: visible;
