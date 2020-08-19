@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './style.scss';
+import styles from './app.scss';
 import ImageList from './imageList.jsx';
 import axios from 'axios';
 import Carousel from './carousel.jsx';
@@ -19,11 +19,13 @@ class App extends React.Component {
     }
 
     this.getSampleProductOneAllInfo = this.getSampleProductOneAllInfo.bind(this);
+    // this.getProductImages = this.getProductImages.bind(this);
   }
 
 
   componentDidMount() {
     this.getSampleProductOneAllInfo();
+    // this.getProductImages();
   }
 
   getSampleProductOneAllInfo() {
@@ -52,12 +54,21 @@ class App extends React.Component {
   // }
 
   // getProductImages() {
-  //   axios.get('/product/:id')
-  //     .then((results) => {
-  //       console.log('successful get request', results)
-  //     })
-  //     .catch((err) => {
-  //       console.log('error in get request', err)
+  //   var productID = window.location.pathname;
+  //   console.log("productID", productID);
+  //   var id = productID.match(/(\d+)/)[0];
+  //   var path = `/data/${id}`
+  //   axios.get(path)
+  //   .then((results) => {
+  //     // console.log({results})
+  //     this.setState({
+  //       allImages: results.data,
+  //       isLoading: false,
+  //       // firstImage: results.data[0]
+  //     });
+  //   })
+  //   .catch((err) => {
+  //     console.log('error in get request', err)
   //   })
   // }
 

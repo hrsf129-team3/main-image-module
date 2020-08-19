@@ -37,6 +37,20 @@ app.get('/product1info', function (req, res, next) {
   });
 });
 
+//sample api route for product 1 all info
+app.get('/data/id', function (req, res, next) {
+  var productID = req.param.id;
+  console.log('req.param', req.param.id);
+  db.getProductInfo((err, results) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      // console.log(results);
+      res.status(200).send(results);
+    }
+  });
+});
+
 
 //start server
 app.listen(PORT, (err) => {

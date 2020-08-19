@@ -1,0 +1,20 @@
+
+
+$loaders: purple;
+
+.loader {
+  color: $loaders
+}
+
+$roundedCorners: 50px;
+
+$circle: 50%;
+
+.app {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  align-content: flex-start;
+}
+

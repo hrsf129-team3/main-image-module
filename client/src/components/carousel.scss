@@ -1,0 +1,77 @@
+$circle: 50%;
+
+.sideImages {
+  height: 250px;
+  width: 250px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  order: 0;
+}
+
+.carousel {
+  display: flex;
+  order: 1;
+}
+
+.header {
+  display: flex;
+  flex: 1 0;
+  flex-direction: row;
+}
+
+.headerImage {
+  flex: 1 1;
+  height: 1700px;
+  width: 1700px;
+  border-right: 30px solid white;
+  border-left: 30px solid white;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.leftArrow {
+  // display: flex;
+  align-items: stretch;
+  order: -1;
+  height: 100px;
+  width: 100px;
+  border-radius: $circle;
+  margin: 15px;
+  box-shadow: 2px 2px 20px grey;
+  cursor: pointer;
+  align-self: center;
+}
+
+.rightArrow {
+  order: 1;
+  height: 100px;
+  width: 100px;
+  margin: 15px;
+  justify-content: center;
+  align-self: center;
+  box-shadow: 2px 2px 20px grey;
+  border-radius: $circle;
+  cursor: pointer;
+}
+
+.iconsContainer {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heart {
+  order: 1;
+  height: 80px;
+  width: 80px;
+  border: 20px solid white;
+  position: absolute;
+  top: 0;
+  box-shadow: 2px 2px 20px grey;
+  border-radius: $circle;
+  cursor: pointer;
+}
+
