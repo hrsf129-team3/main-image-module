@@ -31,16 +31,18 @@ var getProductOneInfo = function(callback) {
     }
   });
 };
-// var getProductImages = function(callback) {
-//   connection.query('SELECT  FROM ', function(err, results) {
-//     if (err) {
-//       console.log("err in database", err);
-//     } else {
-//       callback(null, results);
-//     }
-//   });
-// };
+
+var getProductImages = function(callback) {
+  connection.query(`SELECT * FROM product_images where product_id = ${productID}`, function(err, results) {
+    if (err) {
+      console.log("err in database", err);
+    } else {
+      callback(null, results);
+    }
+  });
+};
 
 module.exports = connection;
 module.exports.getProductOneImages = getProductOneImages;
 module.exports.getProductOneInfo = getProductOneInfo;
+module.exports.getProductImages = getProductImages;

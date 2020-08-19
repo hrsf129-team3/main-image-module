@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './style.scss';
+import styles from './image.scss';
 // import HeaderImage from './headerImage.jsx';
 
 class Image extends React.Component {
@@ -17,24 +17,8 @@ class Image extends React.Component {
     console.log(event, "event");
     console.log(index, "index");
     this.props.sideImageChange(this.props.index);
-
-    // this.props.setMainImage(this.sideImageIndex)
-    // event.preventDefault();
-
-    // this.props.showSideImage(this.props.index);
-  // },
-  //   console.log(event, "event");
-  //   // console.log(index, "index");
-  //   this.setState({sideImageIndex: this.key - 1});
-    // setState({sideImageIndex: this.props.image.image_order})
-    // this.props.sideImageChange(this.state);
+    this.props.modalSideImageChange(this.props.index);
   }
-
-  // selectHeader() {
-  //   console.log("new header selected");
-  // }
-
-  // this.props.content[index]
 
   render() {
     return (
