@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './modalImage.scss';
+import styles from './modal.scss';
 // import HeaderImage from './headerImage.jsx';
 
 class ModalImage extends React.Component {

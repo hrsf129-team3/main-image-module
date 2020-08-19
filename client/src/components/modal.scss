@@ -1,121 +1,85 @@
 $circle: 50%;
 
 .modalSideImages {
-  height: 250px;
-  width: 250px;
+  height: 350px;
+  width: 350px;
   border-radius: 50px;
-  margin-bottom: 20px;
+  margin: auto 50px 30px auto; //top right bottom left
   cursor: pointer;
   order: 2;
-  right: 10%;
   align-self: flex-start;
-  position: absolute;
+  flex: 0 0 auto;
 }
-
-.iconsContainer {
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.heart {
-  order: 1;
-  height: 80px;
-  width: 80px;
-  border: 20px solid white;
-  position: absolute;
-  top: 0;
-  box-shadow: 2px 2px 20px grey;
-  border-radius: $circle;
-  cursor: pointer;
-}
-
 
 .exit {
-  order: 5;
+  order: 3;
   height: 80px;
   width: 80px;
   border: 20px solid white;
-  // margin: 15px;
-  align-self: flex-end;
+  align-self: flex-start;
   box-shadow: 2px 2px 20px grey;
   border-radius: $circle;
   background-color: white;
   cursor: pointer;
   z-index: 2;
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  margin: 15px;
+  margin-left: 1100px;
+  flex: 0 0 auto;
 }
 
 .modalImage {
-  left: 12.5%;
-  top: 15%;
-  bottom: 15%;
-  right: 12.5%;
   align-self: flex-start;
   order: 0;
-  height: 2000px;
-  width: 2000px;
+  height: 2200px;
+  width: 2200px;
   z-index: 1;
-  position: absolute;
-  margin: auto;
-  display: block;
   background-color: white;
+  flex: 1 2 auto;
 }
 
 .modalLeftArrow {
-  left: 15%;
   border: 20px solid white;
   order: -1;
   height: 100px;
   width: 100px;
   border-radius: $circle;
-  margin: 15px;
+  margin: 0px 150px 50px 0px; //top right bottom left
   box-shadow: 2px 2px 20px grey;
   cursor: pointer;
-  align-self: flex-start;
+  align-self: center;
   z-index: 2;
-  position: absolute;
   background-color: white;
-  top: 50%;
+  flex: 0 0 auto;
 }
 
 .modalRightArrow {
-  right: 15%;
   border: 20px solid white;
-  order: 3;
+  order: 0;
   height: 100px;
   width: 100px;
-  margin: 15px;
-  align-self: flex-end;
+  margin: 0px 150px 200px 150px; //top right bottom left
+  align-self: center;
   box-shadow: 2px 2px 20px grey;
   border-radius: $circle;
   cursor: pointer;
   z-index: 2;
-  position: absolute;
   background-color: white;
-  top: 50%;
+  flex: 0 0 auto;
 }
 
 .modal {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-content: center;
-  justify-content: flex-start;
-  position: absolute; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  justify-content: center;
+  position: absolute; //Stay in place
+  z-index: 1; //Sit on top
+  padding: 100px; //Location of the box
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(82,82,82, 0.9); /* Fallback color */
+  width: 100%; //Full width
+  height: 100%; // Full height
+  overflow: auto; // Enable scroll if needed
+  background-color: rgb(82,82,82, 0.9); // Fallback color */
   opacity: 1;
   visibility: visible;
 }
