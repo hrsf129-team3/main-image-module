@@ -3,6 +3,7 @@ import styles from './carousel.scss';
 import ImageList from './imageList.jsx';
 import axios from 'axios';
 import Modal from './modal.jsx';
+import LeftArrow from './leftArrow.jsx';
 
 class Carousel extends React.Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class Carousel extends React.Component {
     this.exitModal = this.exitModal.bind(this);
   }
 
-  nextImage() {
+  nextImage(index) {
     if (this.state.imageIndex !== this.props.allImages.length - 1) {
       var increment = this.state.imageIndex + 1
       this.setState({imageIndex: increment});
@@ -30,10 +31,11 @@ class Carousel extends React.Component {
     }
   }
 
-  previousImage() {
+  previousImage(index) {
     if (this.state.imageIndex !== 0) {
       var decrement = this.state.imageIndex - 1;
       this.setState({imageIndex: decrement});
+      console.log("carousel clicked")
     } else if (this.state.imageIndex === 0) {
       this.setState({imageIndex: this.props.allImages.length - 1})
       // console.log("reached beginning")
@@ -82,8 +84,9 @@ class Carousel extends React.Component {
           <ImageList allImages={this.props.allImages} showMainImage={this.showMainImage} sideImageChange={this.sideImageChange}/>
         </div>
         <div className={styles.header}>
-          <div className={styles.leftArrow}>
-            <svg onClick={this.previousImage} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21a.994.994 0 01-.664-.253L5.5 12l9.841-8.747a1 1 0 011.328 1.494L8.5 12l8.159 7.253A1 1 0 0116 21z" /></svg>
+          <div className={styles.leftArrow} >
+            <LeftArrow previousImage={this.previousImage}/>
+            {/* <svg onClick={this.previousImge} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21a.994.994 0 01-.664-.253L5.5 12l9.841-8.747a1 1 0 011.328 1.494L8.5 12l8.159 7.253A1 1 0 0116 21z" /></svg> */}
           </div>
           {this.showMainImage() }
           <div className={styles.iconsContainer}>

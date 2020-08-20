@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './modal.scss';
 import ModalImageList from './modalImageList.jsx';
+import LeftArrow from './leftArrow.jsx';
 
 class Modal extends React.Component {
   constructor(props) {
@@ -61,7 +62,8 @@ class Modal extends React.Component {
     return (
       <div className={styles.modal}>
         <div className={styles.modalLeftArrow}>
-          <svg onClick={this.modalPreviousImage} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21a.994.994 0 01-.664-.253L5.5 12l9.841-8.747a1 1 0 011.328 1.494L8.5 12l8.159 7.253A1 1 0 0116 21z" /></svg>
+          <LeftArrow modalPreviousImage={this.modalPreviousImage}/>
+          {/* <svg onClick={this.modalPreviousImage} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21a.994.994 0 01-.664-.253L5.5 12l9.841-8.747a1 1 0 011.328 1.494L8.5 12l8.159 7.253A1 1 0 0116 21z" /></svg> */}
         </div>
         {this.showModalMainImage()}
         <div className={styles.modalRightArrow} >

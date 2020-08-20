@@ -1,10 +1,10 @@
 $circle: 50%;
 
 .modalSideImages {
-  height: 350px;
-  width: 350px;
-  border-radius: 50px;
-  margin: auto 50px 30px auto; //top right bottom left
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+  margin: auto 50px 10px auto; //top right bottom left
   cursor: pointer;
   order: 2;
   align-self: flex-start;
@@ -20,36 +20,36 @@ $circle: 50%;
 
 .exit {
   order: 3;
-  height: 80px;
-  width: 80px;
-  border: 20px solid white;
+  height: 30px;
+  width: 30px;
+  border: 15px solid white;
   align-self: flex-start;
   box-shadow: 2px 2px 20px grey;
   border-radius: $circle;
   background-color: white;
   cursor: pointer;
   z-index: 2;
-  margin-left: 1100px;
+  margin-left: 300px;
   flex: 0 0 auto;
 }
 
 .modalImage {
   align-self: flex-start;
   order: 0;
-  height: 2200px;
-  width: 2200px;
+  height: 750px;
+  width: 750px;
   z-index: 1;
   background-color: white;
   flex: 1 2 auto;
 }
 
 .modalLeftArrow {
-  border: 20px solid white;
+  border: 15px solid white;
   order: -1;
-  height: 100px;
-  width: 100px;
+  height: 30px;
+  width: 30px;
   border-radius: $circle;
-  margin: 0px 150px 450px 50px; //top right bottom left
+  margin: 0px 30px 300px 30px; //top right bottom left
   box-shadow: 2px 2px 20px grey;
   cursor: pointer;
   align-self: center;
@@ -59,11 +59,11 @@ $circle: 50%;
 }
 
 .modalRightArrow {
-  border: 20px solid white;
+  border: 15px solid white;
   order: 0;
-  height: 100px;
-  width: 100px;
-  margin: 0px 150px 450px 150px; //top right bottom left
+  height: 30px;
+  width: 30px;
+  margin: 0px 50px 300px 30px; //top right bottom left
   align-self: center;
   box-shadow: 2px 2px 20px grey;
   border-radius: $circle;
@@ -80,11 +80,11 @@ $circle: 50%;
   justify-content: center;
   position: absolute; //Stay in place
   z-index: 1; //Sit on top
-  padding-top: 100px; //Location of the box
+  padding-top: 45px; //Location of the box
   left: 0;
   top: 0;
   width: 100%; //Full width
-  height: 120%; // Full height
+  height: 130%; // Full height
   // overflow: auto; // Enable scroll if needed
   background-color: rgb(82,82,82, 0.9); // Fallback color */
   opacity: 1;

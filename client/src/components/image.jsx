@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './image.scss';
+import styles from './carousel.scss';
 // import HeaderImage from './headerImage.jsx';
 
 class Image extends React.Component {
