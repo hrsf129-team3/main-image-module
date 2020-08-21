@@ -80,6 +80,7 @@ class Carousel extends React.Component {
   render() {
     return (
       <div className={styles.carousel}>
+        {/* <p>Test if this is working</p> */}
         <div className={styles.sideImages}>
           <ImageList allImages={this.props.allImages} showMainImage={this.showMainImage} sideImageChange={this.sideImageChange}/>
         </div>

@@ -16,20 +16,6 @@ let seedProductSKUs = () => {
 
 seedProductSKUs();
 
-// let seedProductSKUs = (products) => {
-//   for (var i = 0; i < products.length; i++) {
-//     onst productQuery = `INSERT INTO product_skus (product_SKU) VALUES (${products[i]})`
-//   }
-//   const productQuery = `INSERT INTO product_skus (product_SKU) VALUES (pr);
-//   db.query(productQuery, (err, results) => {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       console.log('product images shown', results)
-//       // callback(null, results);
-//     }
-//   })
-
 const product1 = ['https://etsy-main-image-module.s3-us-west-1.amazonaws.com/african-lamp/african+lamp+1.jpg', 'https://etsy-main-image-module.s3-us-west-1.amazonaws.com/african-lamp/african+lamp+2.jpg', 'https://etsy-main-image-module.s3-us-west-1.amazonaws.com/african-lamp/african+lamp+3.jpg', 'https://etsy-main-image-module.s3-us-west-1.amazonaws.com/african-lamp/african+lamp+4.jpg'];
 const product2 = ['https://etsy-main-image-module.s3-us-west-1.amazonaws.com/avocadont-pin/avocadont+1.jpg', 'https://etsy-main-image-module.s3-us-west-1.amazonaws.com/avocadont-pin/avocadont+2.jpg', 'https://etsy-main-image-module.s3-us-west-1.amazonaws.com/avocadont-pin/avocadont+3.jpg', 'https://etsy-main-image-module.s3-us-west-1.amazonaws.com/avocadont-pin/avocadont+4.jpg'];
 const product3 = ['https://etsy-main-image-module.s3-us-west-1.amazonaws.com/daisy-the-labrador/daisy+lab+1.jpg', 'https://etsy-main-image-module.s3-us-west-1.amazonaws.com/daisy-the-labrador/daisy+lab+2.jpg', 'https://etsy-main-image-module.s3-us-west-1.amazonaws.com/daisy-the-labrador/daisy+lab+3.jpg', 'https://etsy-main-image-module.s3-us-west-1.amazonaws.com/daisy-the-labrador/daisy+lab+4.jpg', 'https://etsy-main-image-module.s3-us-west-1.amazonaws.com/daisy-the-labrador/daisy+lab+5.jpg', 'https://etsy-main-image-module.s3-us-west-1.amazonaws.com/daisy-the-labrador/daisy+lab+6.jpg', 'https://etsy-main-image-module.s3-us-west-1.amazonaws.com/daisy-the-labrador/daisy+lab+7.jpg', 'https://etsy-main-image-module.s3-us-west-1.amazonaws.com/daisy-the-labrador/daisy+lab+8.jpg', 'https://etsy-main-image-module.s3-us-west-1.amazonaws.com/daisy-the-labrador/daisy+lab+9.jpg', 'https://etsy-main-image-module.s3-us-west-1.amazonaws.com/daisy-the-labrador/daisy+lab+10.jpg'];
@@ -55,39 +41,4 @@ let seedProductImages = () => {
   };
 }
 
-
-//   for (var i = 0; i < product1.length; i++) {
-//     // for (var j = 0; j < allProducts[i].length; j++) {
-//     var productImageQuery = `INSERT INTO product_images (image_order, image_url, product_id) VALUES (${i}, '${product1[i]}', 1)`;
-//     // console.log("test")
-//     db.query(productImageQuery, (err, results) => {
-//       if (err) {
-//         console.log(err);
-//       } else {
-//         console.log('product images shown', results)
-//         // callback(null, results);
-//       };
-//     })
-//   }
-// }
-
 seedProductImages();
-
-//   for (var i = 0; i < product1.length; i++) {
-//     for (var j = 0; j < allProducts[i].length; j++) {
-//       var productImageQuery = `INSERT INTO product_images (image_order, image_url, product_id) VALUES (${j}, '${faker.random.arrayElement(allProducts)[j]}', ${faker.random.number({min:1, max:6})})`;
-//       // console.log("test")
-//       db.query(productImageQuery, (err, results) => {
-//         if (err) {
-//           console.log(err);
-//         } else {
-//           console.log('product images shown', results)
-//           // callback(null, results);
-//         }
-//       });
-//     }
-//   };
-// }
-// }
-
-// module.exports.seedProductImages = seedProductImages;
