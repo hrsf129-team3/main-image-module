@@ -2,7 +2,7 @@ var mysql      = require('mysql');
 // const password = require('./config.js');
 
 var connection = mysql.createConnection({
-  host     : 'localhost',
+  host     : 'database',
   user     : 'root',
   password : 'root',
   database : 'products'
