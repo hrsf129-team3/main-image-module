@@ -19,5 +19,3 @@ FROM mysql:5.7
 COPY --from=builder /initialized-db /var/lib/mysql
 
 EXPOSE 3306
-
-# CMD [ "npm", "run", "seed" ]
