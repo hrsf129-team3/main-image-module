@@ -14,10 +14,10 @@ class Image extends React.Component {
   }
 
   handleClick(index, event) {
-    console.log(event, "event");
-    console.log(index, "index");
+  //   console.log(event, "event");
+  //   console.log(index, "index");
     this.props.sideImageChange(this.props.index);
-    this.props.modalSideImageChange(this.props.index);
+  //   this.props.modalSideImageChange(this.props.index);
   }
 
   render() {

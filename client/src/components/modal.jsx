@@ -19,7 +19,6 @@ class Modal extends React.Component {
   showModalMainImage(index) {
     if (this.props.allImages.length > 0) {
       var imgSrc = this.props.allImages[this.state.modalImageIndex].image_url;
-      // console.log({ imgSrc })
     }
     return (
       <div>
@@ -28,9 +27,7 @@ class Modal extends React.Component {
     )
   }
 
-
   modalSideImageChange(index) {
-    console.log("index in carousel", index);
     this.setState({
       modalImageIndex: index
     })
@@ -40,7 +37,6 @@ class Modal extends React.Component {
     if (this.state.modalImageIndex !== this.props.allImages.length - 1) {
       var increment = this.state.modalImageIndex + 1
       this.setState({modalImageIndex: increment});
-      // console.log("image index", this.state.modalImageIndex);
     } else if (this.state.modalImageIndex === this.props.allImages.length - 1) {
       this.setState({modalImageIndex: 0})
     }

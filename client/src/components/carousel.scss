@@ -1,10 +1,10 @@
 $circle: 50%;
 
 .sideImages {
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   border-radius: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   cursor: pointer;
   order: 0;
   flex: 0 0 auto;
@@ -24,16 +24,15 @@ $circle: 50%;
 
 .headerImage {
   flex: 1 2 auto;
-  height: 425px;
-  width: 425px;
+  height: auto;
+  width: 480px;
   border-right: 5px solid white;
   border-left: 5px solid white;
-  z-index: 0;
+  z-index: 1;
   cursor: pointer;
 }
 
 .leftArrow {
-  // align-items: stretch;
   order: 0;
   height: 20px;
   width: 20px;
