@@ -57,16 +57,16 @@ class Modal extends React.Component {
     }
     return (
       <div className={styles.modal}>
-        <div className={styles.modalLeftArrow}>
+        <div className={styles.modalLeftArrowContainer}>
           {/* <LeftArrow modalPreviousImage={this.modalPreviousImage}/> */}
-          <svg onClick={this.modalPreviousImage} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21a.994.994 0 01-.664-.253L5.5 12l9.841-8.747a1 1 0 011.328 1.494L8.5 12l8.159 7.253A1 1 0 0116 21z" /></svg>
+          <svg className={styles.modalLeftArrow} onClick={this.modalPreviousImage} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21a.994.994 0 01-.664-.253L5.5 12l9.841-8.747a1 1 0 011.328 1.494L8.5 12l8.159 7.253A1 1 0 0116 21z" /></svg>
         </div>
         {this.showModalMainImage()}
-        <div className={styles.modalRightArrow} >
-          <svg onClick={this.modalNextImage} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21a1 1 0 01-.664-1.747L15.5 12 7.336 4.747a1 1 0 011.328-1.494L18.5 12l-9.836 8.747A.994.994 0 018 21z" /></svg>
+        <div className={styles.modalRightArrowContainer} >
+          <svg className={styles.modalRightArrow} onClick={this.modalNextImage} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21a1 1 0 01-.664-1.747L15.5 12 7.336 4.747a1 1 0 011.328-1.494L18.5 12l-9.836 8.747A.994.994 0 018 21z" /></svg>
         </div>
-        <div className={styles.exit}>
-          <svg onClick={this.props.exitModal} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 101.414 1.414L12 13.414l6.293 6.293a1 1 0 001.414-1.414z" /></svg>
+        <div className={styles.exitContainer}>
+          <svg className={styles.exit} onClick={this.props.exitModal} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 101.414 1.414L12 13.414l6.293 6.293a1 1 0 001.414-1.414z" /></svg>
         </div>
         <div className={styles.modalSideImagesContainer}>
           <ModalImageList allImages={this.props.allImages} modalSideImageChange={this.modalSideImageChange}/>

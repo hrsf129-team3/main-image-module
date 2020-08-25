@@ -4,12 +4,12 @@ const app = express();
 const PORT = 3007;
 const path = require('path');
 const db = require('../db/index.js')
-const expressStaticGzip = require("express-static-gzip");
+// const expressStaticGzip = require("express-static-gzip");
 
 //middleware
 app.use('/products/:id', express.json());
-// app.use('/products/:id', express.static(path.join(__dirname, '../client/dist')))
-app.use('/products/:id', expressStaticGzip(path.join(__dirname, '../client/dist'), { enableBrotli: true, orderPreference: ['br'] }));
+app.use('/products/:id', express.static(path.join(__dirname, '../client/dist')))
+// app.use('/products/:id', expressStaticGzip(path.join(__dirname, '../client/dist'), { enableBrotli: true, orderPreference: ['br'] }));
 
 //routes
 
