@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './modal.scss';
 import ModalImageList from './modalImageList.jsx';
-// import LeftArrow from './leftArrow.jsx';
+import LeftArrow from './leftArrow.jsx';
 
 class Modal extends React.Component {
   constructor(props) {
@@ -43,6 +43,7 @@ class Modal extends React.Component {
   }
 
   modalPreviousImage() {
+    console.log('modal move!')
     if (this.state.modalImageIndex !== 0) {
       var decrement = this.state.modalImageIndex - 1;
       this.setState({modalImageIndex: decrement});
@@ -58,10 +59,12 @@ class Modal extends React.Component {
     return (
       <div className={styles.modal}>
         <div className={styles.modalLeftArrowContainer}>
-          {/* <LeftArrow modalPreviousImage={this.modalPreviousImage}/> */}
-          <svg className={styles.modalLeftArrow} onClick={this.modalPreviousImage} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21a.994.994 0 01-.664-.253L5.5 12l9.841-8.747a1 1 0 011.328 1.494L8.5 12l8.159 7.253A1 1 0 0116 21z" /></svg>
+          <LeftArrow className={styles.modalLeftArrow} moveLeft={this.modalPreviousImage}/>
+          {/* <svg className={styles.modalLeftArrow} onClick={this.modalPreviousImage} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21a.994.994 0 01-.664-.253L5.5 12l9.841-8.747a1 1 0 011.328 1.494L8.5 12l8.159 7.253A1 1 0 0116 21z" /></svg> */}
         </div>
-        {this.showModalMainImage()}
+        <div className={styles.modalImageContainer}>
+          {this.showModalMainImage()}
+        </div>
         <div className={styles.modalRightArrowContainer} >
           <svg className={styles.modalRightArrow} onClick={this.modalNextImage} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21a1 1 0 01-.664-1.747L15.5 12 7.336 4.747a1 1 0 011.328-1.494L18.5 12l-9.836 8.747A.994.994 0 018 21z" /></svg>
         </div>

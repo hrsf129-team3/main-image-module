@@ -7,7 +7,7 @@ $circle: 50%;
   margin: auto 50px 10px auto; //top right bottom left
   cursor: pointer;
   order: 2;
-  align-self: flex-start;
+  align-self: center;
   flex: 1 1 auto;
   position: relative;
 }
@@ -48,15 +48,22 @@ $circle: 50%;
   order: 5;
 }
 
+.modalImageContainer {
+  display: flex;
+  position: static;
+}
+
 .modalImage {
-  align-self: flex-start;
+  align-self: center;
   order: 0;
   height: auto;
   width: 520px;
   z-index: 2;
   background-color:  rgb(82,82,82, 0.9);
-  flex: 0 0 200px;
+  // flex: 1 1 500px;
   margin-bottom: 100px;
+  position: relative;
+  flex-shrink: 0;
 }
 
 .modalLeftArrow {
@@ -106,10 +113,21 @@ $circle: 50%;
   height: 100%;
   background-color: rgb(82,82,82, 0.9); // Fallback color */
   opacity: 1;
+  flex-shrink: 0;
   // visibility: visible;
 }
 
-svg:hover {
+.modalLeftArrow:hover {
   background-color: rgb(248,248,248);
-  border: 10px solid rgb(248,248,248);
+  border: 11.5px solid rgb(248,248,248);
+}
+
+.modalRightArrow:hover {
+  background-color: rgb(248,248,248);
+  border: 11.5px solid rgb(248,248,248);
+}
+
+.exit:hover {
+  background-color: rgb(248,248,248);
+  border: 11.5px solid rgb(248,248,248);
 }

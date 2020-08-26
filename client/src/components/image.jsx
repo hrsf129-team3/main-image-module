@@ -18,10 +18,14 @@ class Image extends React.Component {
   //   this.props.modalSideImageChange(this.props.index);
   }
 
+  highlightImage() {
+
+  }
+
   render() {
     return (
       <div>
-        <img src={this.props.image.image_url}  alt="product image" className={styles.sideImages} onClick={() => {this.handleClick(this.props.index, event)}}></img>
+        <img src={this.props.image.image_url} alt="product image" className={styles.sideImages} onClick={() => {this.handleClick(this.props.index, event)}}></img>
       </div>
     )
   }
