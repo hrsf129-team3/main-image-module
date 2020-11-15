@@ -12,13 +12,18 @@ $circle: 50%;
   position: relative;
 }
 
-.modalSideImagesContainer{
+.modalSideImagesContainer {
   display: flex;
   order: 2;
   flex-direction: column;
   overflow-x: hidden;
   overflow-y: auto;
   margin-bottom: 100px;
+}
+
+.modalImageContainer {
+  display: flex;
+  flex-direction: row;
 }
 
 .exit {

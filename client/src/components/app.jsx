@@ -11,41 +11,12 @@ class App extends React.Component {
       allImages: [],
       isLoading: true,
     }
-
-    // this.getSampleProductOneAllInfo = this.getSampleProductOneAllInfo.bind(this);
     this.getProductImages = this.getProductImages.bind(this);
   }
 
-
   componentDidMount() {
-    // this.getSampleProductOneAllInfo();
     this.getProductImages();
   }
-
-  // getSampleProductOneAllInfo() {
-  //   axios.get('/product1info')
-  //     .then((results) => {
-  //       // console.log({results})
-  //       this.setState({
-  //         allImages: results.data,
-  //         isLoading: false,
-  //         // firstImage: results.data[0]
-  //       });
-  //     })
-  //     .catch((err) => {
-  //       console.log('error in get request', err)
-  //     })
-  // }
-
-  // getSampleProductOneImages() {
-  //   axios.get('/product1')
-  //     .then((results) => {
-  //       console.log('successful get request', results)
-  //     })
-  //     .catch((err) => {
-  //       console.log('error in get request', err)
-  //     })
-  // }
 
   getProductImages() {
     var productID = window.location.pathname;
@@ -72,6 +43,5 @@ class App extends React.Component {
     );
   }
 }
-
 
 export default App;

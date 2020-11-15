@@ -11,21 +11,21 @@ module.exports = {
     filename: 'bundle.js',
     path: DIST_DIR,
   },
-  plugins: [
-    new CompressionPlugin({
-      filename: '[path].gz[query]',
-      algorithm: 'gzip',
-      test: /\.js$|\.css$|\.html$/,
-      threshold: 10240,
-      minRatio: 0.8,
-    }),
-    new BrotliPlugin({
-      filename: '[path].br[query]',
-      test: /\.js$|\.css$|\.html$/,
-      threshold: 10240,
-      minRatio: 0.8,
-    }),
-  ],
+  // plugins: [
+  //   new CompressionPlugin({
+  //     filename: '[path].gz[query]',
+  //     algorithm: 'gzip',
+  //     test: /\.js$|\.css$|\.html$/,
+  //     threshold: 10240,
+  //     minRatio: 0.8,
+  //   }),
+  //   new BrotliPlugin({
+  //     filename: '[path].br[query]',
+  //     test: /\.js$|\.css$|\.html$/,
+  //     threshold: 10240,
+  //     minRatio: 0.8,
+  //   }),
+  // ],
   module: {
     rules: [
       {

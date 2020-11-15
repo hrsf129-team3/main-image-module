@@ -7,6 +7,7 @@ class ModalImage extends React.Component {
     super(props);
 
     this.handleClick = this.handleClick.bind(this);
+
   }
 
   handleClick(index, event) {

@@ -12,7 +12,6 @@ class ImageList extends React.Component {
     return (
       <div>
         {this.props.allImages.map((image, index) => {
-          // console.log(index, "inde in image list");
           return <Image key={image.id} image={image} allImages={this.props.allImages} showMainImage={this.props.showMainImage} sideImageChange={this.props.sideImageChange} modalSideImageChange={this.props.modalSideImageChange} index={index}/>
         })}
       </div>
