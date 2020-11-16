@@ -11,7 +11,8 @@
 
 ## Demonstration
 
-> <iframe src="https://giphy.com/embed/kS96TFqv9cQXDOqj0V" width="480" height="252" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/kS96TFqv9cQXDOqj0V">via GIPHY</a></p>
+> ![](https://gph.is/g/ZY08lR1)
+
 
 ## Requirements
 
