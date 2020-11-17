@@ -5,14 +5,13 @@
 
 ## Table of Contents
 
-1. [Usage](#Usage)
+1. [Demonstration](#demonstration)
 1. [Requirements](#requirements)
 1. [Development](#development)
 
 ## Demonstration
 
-> ![](https://gph.is/g/ZY08lR1)
-
+> ![main-image-module](https://github.com/lampjam/main-image-module/blob/master/img/main-image.gif)
 
 ## Requirements
 
