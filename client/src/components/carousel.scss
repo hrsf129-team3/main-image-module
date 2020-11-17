@@ -1,28 +1,5 @@
 $circle: 50%;
 
-.sideImages {
-  height: 45px;
-  width: 45px;
-  border-radius: 10px;
-  margin-bottom: 1px;
-  cursor: pointer;
-  order: 0;
-  flex: 0 0 auto;
-  margin-right: 25px;
-}
-
-.clickedSideImages {
-  height: 45px;
-  width: 45px;
-  border-radius: 10px;
-  margin-bottom: 3px;
-  cursor: pointer;
-  order: 0;
-  flex: 0 0 auto;
-  margin-right: 25px;
-  border-color: green;
-}
-
 .carousel {
   display: flex;
   order: 1;
@@ -42,6 +19,17 @@ $circle: 50%;
   border-left: 5px solid white;
   z-index: 1;
   cursor: pointer;
+}
+
+.sideImages {
+  height: 45px;
+  width: 45px;
+  border-radius: 10px;
+  margin-bottom: 1px;
+  cursor: pointer;
+  order: 0;
+  flex: 0 0 auto;
+  margin-right: 25px;
 }
 
 .leftArrowContainer{
@@ -66,23 +54,15 @@ $circle: 50%;
   border: 10px solid rgb(248,248,248);
 }
 
-.rightArrow:hover {
-  background-color: rgb(248,248,248);
-  border: 10px solid rgb(248,248,248);
-}
-
-.heart:hover {
-  background-color: rgb(248,248,248);
-  border: 10px solid rgb(248,248,248);
+.iconsContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .rightArrowContainer {
   flex: 9;
-  display: flex;
-}
-
-.heartContainer {
-  flex: 1;
   display: flex;
 }
 
@@ -101,11 +81,14 @@ $circle: 50%;
   flex: 0 0 auto;
 }
 
-.iconsContainer {
-  height: 100%;
+.rightArrow:hover {
+  background-color: rgb(248,248,248);
+  border: 10px solid rgb(248,248,248);
+}
+
+.heartContainer {
+  flex: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .heart {
@@ -135,3 +118,23 @@ $circle: 50%;
   margin-left: 15px;
   fill: rgb(166,26,46)!important;
 }
+
+.heart:hover {
+  background-color: rgb(248,248,248);
+  border: 10px solid rgb(248,248,248);
+}
+
+// .clickedSideImages {
+//   height: 45px;
+//   width: 45px;
+//   border-radius: 10px;
+//   margin-bottom: 3px;
+//   cursor: pointer;
+//   order: 0;
+//   flex: 0 0 auto;
+//   margin-right: 25px;
+//   border-color: green;
+//   // overflow-x: hidden;
+//   // overflow-y: auto;
+// }
+

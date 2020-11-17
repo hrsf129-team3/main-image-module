@@ -1,33 +1,106 @@
 $circle: 50%;
 
-.modalSideImages {
-  height: 100px;
-  width: 100px;
-  border-radius: 10px;
-  margin: auto 50px 10px auto; //top right bottom left
-  cursor: pointer;
-  order: 2;
-  align-self: center;
-  flex: 1 1 auto;
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(82,82,82, 0.9); // Fallback color */
+  opacity: 1;
+  overflow: none;
+  // animation: popup 0.30s;
+}
+
+.modalImageContainer {
+  margin-top: 50px;
+  flex: 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalImage {
+  padding-top: 25px;
+  height: auto;
+  width: 500px;
+  padding-bottom: 100px;
   position: relative;
 }
 
 .modalSideImagesContainer {
   display: flex;
-  order: 2;
+  flex: 1;
   flex-direction: column;
-  overflow-x: hidden;
-  overflow-y: auto;
-  margin-bottom: 100px;
+  // margin-right: 00px;
+  overflow-y:scroll;
+  position:relative;
+  height: 80vh;
+  margin-top: 200px;
+  overflow: scroll;
+  margin-bottom: 200px;
+  margin-right:100px;
 }
 
-.modalImageContainer {
-  display: flex;
-  flex-direction: row;
+.modalSideImages {
+  height: 85px;
+  width: 85px;
+  border-radius: 10px;
+  margin: auto 50px 10px auto; //top right bottom left
+  cursor: pointer;
+}
+
+.modalLeftArrow {
+  border: 10px solid white;
+  height: 20px;
+  width: 20px;
+  border-radius: $circle;
+  margin: 20px 30px 70px 30px; //top right bottom left
+  box-shadow: 2px 2px 20px grey;
+  cursor: pointer;
+  align-self: center;
+  z-index: 5;
+  background-color: white;
+  position: relative;
+  margin-left: 270px;
+}
+
+.modalLeftArrow:hover {
+  background-color: rgb(248,248,248);
+  border: 11.5px solid rgb(248,248,248);
+}
+
+.modalRightArrow {
+  border: 10px solid white;
+  height: 20px;
+  width: 20px;
+  margin: 20px 50px 70px 30px; //top right bottom left
+  align-self: center;
+  box-shadow: 2px 2px 20px grey;
+  border-radius: $circle;
+  cursor: pointer;
+  z-index: 5;
+  background-color: white;
+  position: relative;
+}
+
+.modalRightArrow:hover {
+  background-color: rgb(248,248,248);
+  border: 11.5px solid rgb(248,248,248);
+}
+
+.exitContainer {
+  flex: 0;
+  height: 100%;
+  margin-top: 3px;
+  margin-right: 3px;
+  align-items: flex-start;
 }
 
 .exit {
-  order: 5;
   height: 20px;
   width: 20px;
   border: 10px solid white;
@@ -36,103 +109,34 @@ $circle: 50%;
   border-radius: $circle;
   background-color: white;
   cursor: pointer;
-  z-index: 2;
-  flex: 0 0 auto;
-}
-
-.modalRightArrowContainer {
-  display: flex;
-}
-
-.modalLeftArrowContainer {
-  display: flex;
-}
-
-.exitContainer {
-  display: flex;
-  order: 5;
-}
-
-.modalImageContainer {
-  display: flex;
-  position: static;
-}
-
-.modalImage {
-  align-self: center;
-  order: 0;
-  height: auto;
-  width: 520px;
-  z-index: 2;
-  background-color:  rgb(82,82,82, 0.9);
-  // flex: 1 1 500px;
-  margin-bottom: 100px;
-  position: relative;
-  flex-shrink: 0;
-}
-
-.modalLeftArrow {
-  border: 10px solid white;
-  order: -1;
-  height: 20px;
-  width: 20px;
-  border-radius: $circle;
-  margin: 0px 30px 70px 30px; //top right bottom left
-  box-shadow: 2px 2px 20px grey;
-  cursor: pointer;
-  align-self: center;
-  z-index: 2;
-  background-color: white;
-  flex: 0 0 auto;
-  position: relative;
-}
-
-.modalRightArrow {
-  border: 10px solid white;
-  order: 0;
-  height: 20px;
-  width: 20px;
-  margin: 0px 50px 70px 30px; //top right bottom left
-  align-self: center;
-  box-shadow: 2px 2px 20px grey;
-  border-radius: $circle;
-  cursor: pointer;
-  z-index: 2;
-  background-color: white;
-  flex: 0 0 auto;
-  position: relative;
-}
-
-.modal {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  z-index: 2; //Sit on top
-  padding-top: 45px; //Location of the box
-  left: 0;
-  top: 0;
-  position: fixed;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(82,82,82, 0.9); // Fallback color */
-  opacity: 1;
-  flex-shrink: 0;
-  // visibility: visible;
-}
-
-.modalLeftArrow:hover {
-  background-color: rgb(248,248,248);
-  border: 11.5px solid rgb(248,248,248);
-}
-
-.modalRightArrow:hover {
-  background-color: rgb(248,248,248);
-  border: 11.5px solid rgb(248,248,248);
+  z-index: 5;
 }
 
 .exit:hover {
   background-color: rgb(248,248,248);
   border: 11.5px solid rgb(248,248,248);
+}
+
+.outerModal {
+  z-index: -1;
+}
+
+.click {
+  z-index: -1;
+  width: 100 vw;
+  height: 100 vh;
+}
+
+@keyframes popup {
+  0% { transform: translateY(101%)}
+  10% { transform: translateY(90%)}
+  20% { transform: translateY(80%)}
+  30% { transform: translateY(70%)}
+  40% { transform: translateY(60%)}
+  50% { transform: translateY(50%)}
+  60% { transform: translateY(40%)}
+  70% { transform: translateY(30%)}
+  80% { transform: translateY(20%)}
+  90% { transform: translateY(10%)}
+  100% { transform: translateY(0%)}
 }

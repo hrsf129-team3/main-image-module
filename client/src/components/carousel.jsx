@@ -63,6 +63,7 @@ class Carousel extends React.Component {
   }
 
   modalPopup(event) {
+    document.body.style.overflow = 'hidden';
     this.setState({
       popup: true
     });
@@ -83,7 +84,6 @@ class Carousel extends React.Component {
   render() {
     return (
       <div className={styles.carousel}>
-        {/* <p>Test if this is working</p> */}
         <div className={styles.sideImages}>
           <ImageList allImages={this.props.allImages} sideImageChange={this.sideImageChange}/>
         </div>

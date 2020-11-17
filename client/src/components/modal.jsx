@@ -3,6 +3,7 @@ import styles from './modal.scss';
 import ImageList from './imageList.jsx';
 import LeftArrow from './leftArrow.jsx';
 import RightArrow from './rightArrow.jsx';
+import ModalImageList from './modalImageList.jsx';
 
 class Modal extends React.Component {
   constructor(props) {
@@ -56,23 +57,19 @@ class Modal extends React.Component {
       return null;
     }
     return (
-      <div className={styles.modal} onClick={this.props.exitModal}>
-        <div className={styles.modalImageContainer}>
-          <div className={styles.modalLeftArrowContainer}>
-            <LeftArrow className={styles.modalLeftArrow} moveLeft={this.modalPreviousImage}/>
-          </div>
+      <div>
+        <div className={styles.modal}>
           <div className={styles.modalImageContainer}>
-            {this.showModalMainImage()}
+              <LeftArrow className={styles.modalLeftArrow} moveLeft={this.modalPreviousImage} />
+              {this.showModalMainImage()}
+              <RightArrow className={styles.modalRightArrow} moveRight={this.modalNextImage} />
           </div>
-          <div className={styles.modalRightArrowContainer} >
-            <RightArrow className={styles.modalRightArrow} moveRight={this.modalNextImage}/>
+          <div className={styles.modalSideImagesContainer}>
+            <ModalImageList className={styles.modalSideImages} allImages={this.props.allImages} modalSideImageChange={this.modalSideImageChange} />
           </div>
-        </div>
-        <div className={styles.exitContainer}>
-          <svg className={styles.exit} onClick={this.props.exitModal} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 101.414 1.414L12 13.414l6.293 6.293a1 1 0 001.414-1.414z" /></svg>
-        </div>
-        <div className={styles.modalSideImagesContainer}>
-          <ImageList className={styles.modalSideImages} allImages={this.props.allImages} modalSideImageChange={this.modalSideImageChange}/>
+          <div className={styles.exitContainer}>
+            <svg className={styles.exit} onClick={this.props.exitModal} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.414 12l6.293-6.293a1 1 0 00-1.414-1.414L12 10.586 5.707 4.293a1 1 0 00-1.414 1.414L10.586 12l-6.293 6.293a1 1 0 101.414 1.414L12 13.414l6.293 6.293a1 1 0 001.414-1.414z"/></svg>
+          </div>
         </div>
       </div>
     )

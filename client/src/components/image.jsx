@@ -5,22 +5,19 @@ import styles from './carousel.scss';
 class Image extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       sideImageIndex: 0
     }
-
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(index, event) {
-    this.props.subImageChange(this.props.index);
-    // this.props.modalSideImageChange(this.props.index);
+    this.props.sideImageChange(this.props.index);
   }
 
-  highlightImage() {
+  // highlightImage() {
 
-  }
+  // }
 
   render() {
     return (
