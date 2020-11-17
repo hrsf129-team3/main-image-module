@@ -1,13 +1,7 @@
 # Project Name
 
-> Project description
+> Main Image Carousal
 
-## Related Projects
-
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
 
 ## Table of Contents
 
@@ -15,9 +9,10 @@
 1. [Requirements](#requirements)
 1. [Development](#development)
 
-## Usage
+## Demonstration
 
-> Some usage instructions
+> ![](https://gph.is/g/ZY08lR1)
+
 
 ## Requirements
 
